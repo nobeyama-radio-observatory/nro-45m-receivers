@@ -2,7 +2,7 @@
 
 国立天文台 野辺山宇宙電波観測所の 45m 鏡の受信機の**運用リポジトリ**です。観測所でこの装置群をどう使い、どう保守しているかを集めます。文脈基盤のハブ [nro-context](https://github.com/nobeyama-radio-observatory/nro-context) から参照されます。
 
-扱う受信機：H22、H40、Z45、FOREST（4ビーム）、HINOTORI-TZ、7BEE（7ビーム3帯域）、T70
+扱う受信機：H22、H40、Z45、FOREST（4ビーム）、HINOTORI-TZ、7BEE（7ビーム3帯域）、eQ（所外の装置、試験中）、T70（廃止）
 
 ## 位置づけ
 
@@ -32,7 +32,7 @@
 - 主ブランチに直接書き込まず、プルリクエストを出す。AI が作ったものにはラベル `AI作成` を付ける。
 - 事実には出典を添える。出典を示せない事実は仮説として扱う（ハブの判断記録 [0004](https://github.com/nobeyama-radio-observatory/nro-context/blob/main/decisions/0004-事実の根拠は出典で示す.md)）。
 
-担当：未定（決まるまでは、ハブの担当が預かる）
+担当：装置システムグループの受信機チーム（[聞き取り 2026-11-18（2）](interviews/2026-11-18-2.md) 問1）
 
 ## 利用許諾
 

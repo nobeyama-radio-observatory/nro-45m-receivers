@@ -2,7 +2,10 @@
 # 項目の定義はハブの assets/README.md を参照。
 #   https://github.com/nobeyama-radio-observatory/nro-context/blob/main/assets/README.md
 # 2026-11-18 に、ハブの仮置きの台帳（assets/nro45m.yaml）から移した（判断記録 0006）。
-# 公開資料から AI が埋めた。未記入は聞き取り（interviews/）で埋める。
+# 公開資料から AI が埋め、聞き取り（interviews/）で補った。
+#
+# 受信機に共通する保守：夏に年1回、手間は小（聞き取り2026-11-18-2 問2）。
+# 保守は受信機の部品ごとに分かれている（聞き取り2026-11-18-2 問3）。
 #
 # この台帳にない id（nro45m、if-system）は、ハブの assets/nro45m.yaml にある。
 # それぞれの運用リポジトリができたら、そちらに移る。
@@ -13,7 +16,7 @@
 #   技術シンポ2019：https://www2.nao.ac.jp/~open-info/engipromo/draftparts_2019/gk/tecsym19_Miyazawa_Chieko.pdf
 #   年次報告YYYY：https://www.nao.ac.jp/contents/about/reports/annual-report-ja/annualYYYY-j.pdf
 #   経緯：ハブの history/README.md https://github.com/nobeyama-radio-observatory/nro-context/blob/main/history/README.md
-#   聞き取りYYYY-MM-DD 問N：interviews/YYYY-MM-DD.md の問N
+#   聞き取りYYYY-MM-DD(-n) 問N：interviews/YYYY-MM-DD(-n).md の問N
 
 - id: rx-h22
   name: H22
@@ -23,13 +26,14 @@
   status: 運用中
   offered: 提供
   introduced: 未記入
-  maintenance: {by: 未記入, condition: 未記入, effort: 未記入}
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+  maintenance: {by: 所内, condition: 低雑音増幅器（CLNA）を2022年度に更新し、性能が上がった, effort: 小}
+  renewal: 当面は国際的な競争力を持つ（仮説）
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 2
   docs: データシート
   sources:
     - 状態と提供：データシート
+    - 保守、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
   note: H40 または Z45 と同時に観測できる。H40 との同時観測は2018年に共同利用で開始（技術シンポ2019）
 
 - id: rx-h40
@@ -39,18 +43,20 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: 提供
-  introduced: 未記入
+  introduced: 45m 鏡の建設時から
   maintenance:
     by: 所内
     condition: 電波窓に霜がたまり性能が落ちるため、定期的に昇温と再冷却をする（例年は半年に一度ほど）。2026年11月は湿度が高く早めにたまった
-    effort: 未記入
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+    effort: 小
+  renewal: 更新の予定はない。性能に競争力はないが、アンテナのポインティングを決める受信機として使い続ける
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 2
   docs: データシート
   sources:
     - 状態と提供：データシート
     - 保守：障害情報 Trouble ID 2026-3
+    - 導入、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問6
+  note: アンテナのポインティングを決める受信機（聞き取り2026-11-18-2 問3）
 
 - id: rx-z45
   name: Z45
@@ -59,15 +65,16 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: 提供
-  introduced: 2013年度に搭載（科研費による持ち込みの受信機）。2016年度に機能を一部制限して共同利用に提供
-  maintenance: {by: 未記入, condition: 未記入, effort: 未記入}
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+  introduced: 2013年度に搭載（科研費による持ち込みの受信機）。2016年度に機能を一部制限して共同利用に提供。受け入れの審査（acceptance review）を通過し、観測所で保守・運用している
+  maintenance: {by: 所内, condition: 未記入, effort: 小}
+  renewal: 同じ周波数帯の eQ（rx-eq）が稼働し始めると、運用を終える可能性がある（仮説）
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 2
   docs: データシート
   sources:
     - 状態と提供：データシート
     - 導入：年次報告2013、年次報告2016
+    - 受け入れ、保守、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問5
 
 - id: rx-forest
   name: FOREST（4ビーム受信機）
@@ -80,15 +87,16 @@
   maintenance:
     by: 所内
     condition: 2026年11月に、受信機の機器を制御する計算機のソフトウェアが止まり、再起動で復旧
-    effort: 未記入
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+    effort: 小
+  renewal: 同じ周波数帯の 7BEE（rx-7bee）が稼働し始めると、運用を終える可能性がある（仮説）
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 2
   docs: データシート
   sources:
     - 状態と提供：データシート
     - 導入：経緯（45m 鏡のページ、年次報告2015、年次報告2016）
     - 保守：障害情報 Trouble ID 2026-2
+    - 手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
 
 - id: rx-hinotori-tz
   name: HINOTORI-TZ
@@ -97,16 +105,17 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: リスクシェアで提供
-  introduced: TZ は2009年度に搭載。2019年に大学のグループ（HINOTORI）が改修・移設し、3周波の同時観測ができるようになる
-  maintenance: {by: 未記入, condition: 未記入, effort: 未記入}
+  introduced: 前身の TZ（115 GHz、2ビーム）は2009年度に搭載し、FOREST の運用開始後に運用を終えた。2019年に大学のグループ（HINOTORI）が改修・移設し、3周波の同時観測ができるようになる。HINOTORI-TZ-86G は受け入れの審査を通過し、リスクシェアで観測に公開した
+  maintenance: {by: 所内、大学など外部, condition: まだ開発中の受信機。HINOTORI-TZ-230G の開発が始まり、同じ受信機の中に開発中の部分がある, effort: 中}
   renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 0
   docs: データシート
   sources:
     - 状態と提供：データシート
     - 導入：年次報告2009、技術シンポ2019
-  note: 改修は大学のグループによる。保守を誰が担うかは未確認。単一鏡の観測だけに提供し、VLBI モードは調整中で使えない（プロポーザルの募集 https://www.nro.nao.ac.jp/projects/45m/proposals/calls/ ）
+    - TZ の運用の終了、受け入れ、保守、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問5
+  note: maintainers は所内で単独で判断できる人の数（0）。大学のグループの人数は未記入。単一鏡の観測だけに提供し、VLBI モードは調整中で使えない（プロポーザルの募集 https://www.nro.nao.ac.jp/projects/45m/proposals/calls/ ）
 
 - id: rx-7bee
   name: 7BEE（7ビーム3帯域受信機）
@@ -115,29 +124,45 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: リスクシェアで提供
-  introduced: 2022年8月に搭載
-  maintenance: {by: 未記入, condition: 未記入, effort: 未記入}
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+  introduced: 2022年8月に搭載。2026年からリスクシェアで提供
+  maintenance: {by: 所内, condition: 未記入, effort: 中}
+  renewal: 提供を始めたばかりで、まだしばらくは運用する（仮説）。FOREST と同じ周波数帯を受け持つ
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 2
   docs: データシート
   sources:
     - 状態と提供：データシート
     - 導入：年次報告2022
+    - 提供の開始、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
 
 - id: rx-t70
   name: T70
   kind: 受信機
   part_of: nro45m
   depends_on: [nro45m, if-system]
-  status: 未記入
-  offered: 未記入
+  status: 廃止
   introduced: 2013年度に共同利用に公開
-  maintenance: {by: 未記入, condition: 未記入, effort: 未記入}
-  renewal: 未記入
-  owner_role: 未定
-  maintainers: 未記入
+  ended: 未記入
+  maintenance: {by: なし, condition: 運用を終えており、保守はない, effort: 未記入}
+  renewal: 運用を終えた
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 0
   sources:
     - 導入：年次報告2013
-    - 提供：有料望遠鏡時間の案内 https://www.nro.nao.ac.jp/projects/45m/charge-for-the-nobeyama-45-m-telescope-time/ の受信機の一覧にある
-  note: データシートの受信機の一覧にはない。技術シンポ2019 の構成図では「（旧）T70」とある。今の状態を確かめる必要がある
+    - 廃止：聞き取り2026-11-18-2 問3、問4
+  note: データシートの受信機の一覧にはない。技術シンポ2019 の構成図では「（旧）T70」とある。有料望遠鏡時間の案内 https://www.nro.nao.ac.jp/projects/45m/charge-for-the-nobeyama-45-m-telescope-time/ の受信機の一覧には残っている（2026-11-18 に確認）
+
+- id: rx-eq
+  name: eQ
+  kind: 受信機
+  part_of: nro45m
+  depends_on: [nro45m, if-system]
+  status: 試験中
+  introduced: 搭載の審査（installation review）を通過し、搭載済み。時期は未記入
+  maintenance: {by: 大学など外部, condition: 試験と科学評価（CSV）の段階, effort: 小}
+  renewal: データがそろえば受け入れの審査（acceptance review）を行い、通れば観測所に運用が引き継がれる
+  owner_role: 所外（受け入れの後は観測所に引き継ぐ）
+  maintainers: 0
+  sources:
+    - 状態、保守、引き継ぎの見込み：聞き取り2026-11-18-2 問1、問3
+  note: 所外の装置。maintainers は所内で単独で判断できる人の数（0）。Z45 と同じ周波数帯で、稼働すると Z45 は運用を終える可能性がある。担い手の種類は「所外」と聞いたもので、大学か否かは未確認
