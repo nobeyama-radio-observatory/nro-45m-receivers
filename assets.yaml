@@ -7,8 +7,8 @@
 # 受信機に共通する保守：夏に年1回、手間は小（聞き取り2026-11-18-2 問2）。
 # 保守は受信機の部品ごとに分かれている（聞き取り2026-11-18-2 問3）。
 #
-# この台帳にない id（nro45m、if-system）は、ハブの assets/nro45m.yaml にある。
-# それぞれの運用リポジトリができたら、そちらに移る。
+# この台帳にない id の置き場所は、ハブの assets/README.md の資産の索引で引ける。
+# nro45m は nro-45m-antenna、if-system はハブの assets/nro45m.yaml（運用リポジトリができるまで）。
 #
 # 出典の略記
 #   データシート：45m 鏡のデータシート https://www.nro.nao.ac.jp/en/projects/45m/datasheets/ （2026-11-18 に確認）
@@ -16,6 +16,8 @@
 #   技術シンポ2019：https://www2.nao.ac.jp/~open-info/engipromo/draftparts_2019/gk/tecsym19_Miyazawa_Chieko.pdf
 #   年次報告YYYY：https://www.nao.ac.jp/contents/about/reports/annual-report-ja/annualYYYY-j.pdf
 #   経緯：ハブの history/README.md https://github.com/nobeyama-radio-observatory/nro-context/blob/main/history/README.md
+#   40周年記念誌：『野辺山宇宙電波観測所40周年記念誌』2022年2月（国立国会図書館 請求記号 MB12-M7）。p.N はそのページ。
+#     書誌の詳細はハブの history/README.md の出典の略記。年次報告と食い違うときは年次報告を採る
 #   聞き取りYYYY-MM-DD(-n) 問N：interviews/YYYY-MM-DD(-n).md の問N
 
 - id: rx-h22
@@ -25,7 +27,7 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: 提供
-  introduced: 未記入
+  introduced: 2005年に現在の形に改修。最初の導入の年は未記入
   maintenance: {by: 所内, condition: 低雑音増幅器（CLNA）を2022年度に更新し、性能が上がった, effort: 小}
   renewal: 当面は国際的な競争力を持つ（仮説）
   owner_role: 受信機チーム（装置システムグループ）
@@ -34,6 +36,7 @@
   sources:
     - 状態と提供：データシート
     - 保守、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
+    - 改修：40周年記念誌 p.46
   note: H40 または Z45 と同時に観測できる。H40 との同時観測は2018年に共同利用で開始（技術シンポ2019）
 
 - id: rx-h40
@@ -43,7 +46,7 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: 提供
-  introduced: 45m 鏡の建設時から
+  introduced: 45m 鏡の建設時から。2004年に現在の形に改修
   maintenance:
     by: 所内
     condition: 電波窓に霜がたまり性能が落ちるため、定期的に昇温と再冷却をする（例年は半年に一度ほど）。2026年11月は湿度が高く早めにたまった
@@ -56,6 +59,7 @@
     - 状態と提供：データシート
     - 保守：障害情報 Trouble ID 2026-3
     - 導入、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問6
+    - 改修：40周年記念誌 p.46
   note: アンテナのポインティングを決める受信機（聞き取り2026-11-18-2 問3）
 
 - id: rx-z45
@@ -97,6 +101,8 @@
     - 導入：経緯（45m 鏡のページ、年次報告2015、年次報告2016）
     - 保守：障害情報 Trouble ID 2026-2
     - 手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
+    - 2014年の改修と後継の位置づけ：40周年記念誌 p.48
+  note: 2014年に、信号の安定と保守のしやすさのためにデュワーを全面的に置き換えた。BEARS と TZ の後継の位置づけ
 
 - id: rx-hinotori-tz
   name: HINOTORI-TZ
@@ -105,7 +111,7 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: リスクシェアで提供
-  introduced: 前身の TZ（115 GHz、2ビーム）は2009年度に搭載し、FOREST の運用開始後に運用を終えた。2019年に大学のグループ（HINOTORI）が改修・移設し、3周波の同時観測ができるようになる。HINOTORI-TZ-86G は受け入れの審査を通過し、リスクシェアで観測に公開した
+  introduced: 前身の TZ（115 GHz、2ビーム）は2009年度に搭載し、FOREST の運用開始後、2018年に共同利用への提供を終えた。HINOTORI の開発は2016年度から。2019年に大学のグループ（HINOTORI）が改修・移設し、3周波の同時観測ができるようになる。HINOTORI-TZ-86G は受け入れの審査を通過し、リスクシェアで観測に公開した
   maintenance: {by: 所内、大学など外部, condition: まだ開発中の受信機。HINOTORI-TZ-230G の開発が始まり、同じ受信機の中に開発中の部分がある, effort: 中}
   renewal: 未記入
   owner_role: 受信機チーム（装置システムグループ）
@@ -115,6 +121,7 @@
     - 状態と提供：データシート
     - 導入：年次報告2009、技術シンポ2019
     - TZ の運用の終了、受け入れ、保守、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問5
+    - TZ の提供の終了の年、HINOTORI の開発の開始：40周年記念誌 p.50、p.61
   note: maintainers は所内で単独で判断できる人の数（0）。大学のグループの人数は未記入。単一鏡の観測だけに提供し、VLBI モードは調整中で使えない（プロポーザルの募集 https://www.nro.nao.ac.jp/projects/45m/proposals/calls/ ）
 
 - id: rx-7bee
@@ -124,7 +131,7 @@
   depends_on: [nro45m, if-system]
   status: 運用中
   offered: リスクシェアで提供
-  introduced: 2022年8月に搭載。2026年からリスクシェアで提供
+  introduced: 2020年に大阪府立大学と共同で開発を始め、2022年8月に搭載。2026年からリスクシェアで提供
   maintenance: {by: 所内, condition: 未記入, effort: 中}
   renewal: 提供を始めたばかりで、まだしばらくは運用する（仮説）。FOREST と同じ周波数帯を受け持つ
   owner_role: 受信機チーム（装置システムグループ）
@@ -132,7 +139,7 @@
   docs: データシート
   sources:
     - 状態と提供：データシート
-    - 導入：年次報告2022
+    - 導入：年次報告2022。開発の開始：40周年記念誌 p.27
     - 提供の開始、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
 
 - id: rx-t70
@@ -141,15 +148,16 @@
   part_of: nro45m
   depends_on: [nro45m, if-system]
   status: 廃止
-  introduced: 2013年度に共同利用に公開
-  ended: 未記入
+  introduced: TZ の本格運用に伴い、100 GHz 帯の T100 を 70 GHz 帯に改造（2013年）。2013年度に共同利用に公開
+  ended: 未記入（2021年度の共同利用までは提供していた）
   maintenance: {by: なし, condition: 運用を終えており、保守はない, effort: 未記入}
   renewal: 運用を終えた
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 0
   sources:
     - 導入：年次報告2013
-    - 廃止：聞き取り2026-11-18-2 問3、問4
+    - 改造：40周年記念誌 p.31、p.47
+    - 廃止：聞き取り2026-11-18-2 問3、問4。2021年度まで提供：40周年記念誌 p.46〜47
   note: データシートの受信機の一覧にはない。技術シンポ2019 の構成図では「（旧）T70」とある。有料望遠鏡時間の案内 https://www.nro.nao.ac.jp/projects/45m/charge-for-the-nobeyama-45-m-telescope-time/ の受信機の一覧には残っている（2026-11-18 に確認）
 
 - id: rx-eq
@@ -158,11 +166,65 @@
   part_of: nro45m
   depends_on: [nro45m, if-system]
   status: 試験中
-  introduced: 搭載の審査（installation review）を通過し、搭載済み。時期は未記入
+  introduced: 台湾の中央研究院が開発。2021年11月25日に搭載（45m 鏡に外国で開発された受信機を載せるのは初めて）。搭載の審査（installation review）を通過している
   maintenance: {by: 大学など外部, condition: 試験と科学評価（CSV）の段階, effort: 小}
   renewal: データがそろえば受け入れの審査（acceptance review）を行い、通れば観測所に運用が引き継がれる
   owner_role: 所外（受け入れの後は観測所に引き継ぐ）
   maintainers: 0
   sources:
     - 状態、保守、引き継ぎの見込み：聞き取り2026-11-18-2 問1、問3
+    - 開発と搭載：40周年記念誌 p.69
   note: 所外の装置。maintainers は所内で単独で判断できる人の数（0）。Z45 と同じ周波数帯で、稼働すると Z45 は運用を終える可能性がある。担い手の種類は「所外」と聞いたもので、大学か否かは未確認
+
+# 廃止した受信機
+
+- id: rx-s40
+  name: S40
+  kind: 受信機
+  part_of: nro45m
+  status: 廃止
+  introduced: 1987年に観測を開始
+  ended: 2016年に共同利用での運用を終える
+  maintenance: {by: なし, condition: 運用を終えており、保守はない, effort: 未記入}
+  renewal: 運用を終えた
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 0
+  sources:
+    - 導入と終了：40周年記念誌 p.49
+    - 廃止の理由：40周年記念誌 p.30
+  note: 40 GHz 帯の SIS 受信機。使用頻度の減った装置や機能の重なる装置をやめ、保守の省力化と改修作業の集中化を図るために廃止した
+
+- id: rx-s100-80
+  name: S100/80
+  kind: 受信機
+  part_of: nro45m
+  status: 廃止
+  introduced: 1989年に観測を開始。1990年から共同利用に提供
+  ended: 2015年度に共同利用への提供を停止
+  maintenance: {by: なし, condition: 運用を終えており、保守はない, effort: 未記入}
+  renewal: 運用を終えた
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 0
+  sources:
+    - 導入：40周年記念誌 p.49
+    - 終了：年次報告2015
+    - 廃止の理由：40周年記念誌 p.30
+  note: 一つのデュワーに 80 GHz 帯と 100 GHz 帯の SIS ミキサを載せた受信機。廃止の理由は S40 と同じ
+
+- id: rx-bears
+  name: BEARS（25ビーム受信機）
+  kind: 受信機
+  part_of: nro45m
+  status: 廃止
+  introduced: 1998年に搭載し、4月にファーストライト。2000年から共同利用に提供
+  ended: 2014年度に共同利用への提供の中止を決め、2014年まで提供
+  maintenance: {by: なし, condition: 運用を終えており、保守はない, effort: 未記入}
+  renewal: 運用を終えた。FOREST が後継の位置づけ
+  owner_role: 受信機チーム（装置システムグループ）
+  maintainers: 0
+  sources:
+    - 導入：40周年記念誌 p.17、p.50
+    - 終了：40周年記念誌 p.50、p.106
+    - 廃止の理由：40周年記念誌 p.30
+    - 後継：40周年記念誌 p.48
+  note: 25素子の SIS マルチビーム受信機。廃止の理由は S40 と同じ
