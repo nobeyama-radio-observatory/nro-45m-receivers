@@ -15,6 +15,7 @@
 #   障害情報：NRO45m 障害情報 https://www.nro.nao.ac.jp/projects/45m/projects-45m-trouble/ （2026年11月12日更新の版）
 #   技術シンポ2019：https://www2.nao.ac.jp/~open-info/engipromo/draftparts_2019/gk/tecsym19_Miyazawa_Chieko.pdf
 #   年次報告YYYY：https://www.nao.ac.jp/contents/about/reports/annual-report-ja/annualYYYY-j.pdf
+#   外部評価2023：国立天文台 外部評価（2023年度）野辺山宇宙電波観測所の報告書 https://www.nao.ac.jp/contents/about/reports/external-review/external-review-2023-nro.pdf
 #   経緯：ハブの history/README.md https://github.com/nobeyama-radio-observatory/nro-context/blob/main/history/README.md
 #   40周年記念誌：『野辺山宇宙電波観測所40周年記念誌』2022年2月（国立国会図書館 請求記号 MB12-M7）。p.N はそのページ。
 #     書誌の詳細はハブの history/README.md の出典の略記。年次報告と食い違うときは年次報告を採る
@@ -124,7 +125,7 @@
     - 導入：年次報告2009、技術シンポ2019
     - TZ の運用の終了、受け入れ、保守、担い手の数、担当：聞き取り2026-11-18-2 問1、問3、問5
     - TZ の提供の終了の年、HINOTORI の開発の開始：40周年記念誌 p.50、p.61
-  note: maintainers は所内で単独で判断できる人の数（0）。大学のグループの人数は未記入。単一鏡の観測だけに提供し、VLBI モードは調整中で使えない（プロポーザルの募集 https://www.nro.nao.ac.jp/projects/45m/proposals/calls/ ）
+  note: maintainers は所内で単独で判断できる人の数（0）。大学のグループの人数は未記入。単一鏡の観測だけに提供し、VLBI モードは調整中で使えない（プロポーザルの募集 https://www.nro.nao.ac.jp/projects/45m/proposals/calls/ ）。外部評価2023 p.5 は、HINOTORI（H22+H40+TZ の3周波の単一鏡の観測）を観測所の装置（facility instrument）として受け入れ済みとする。受け入れの審査を通ったのは HINOTORI-TZ-86G（聞き取り2026-11-18-2 問3）で、開発中なのは HINOTORI-TZ-230G など同じ受信機の中のほかの部分。「まだ開発中」はこの部分を指す
 
 - id: rx-7bee
   name: 7BEE（7ビーム3帯域受信機）
@@ -144,6 +145,7 @@
     - 状態と提供：データシート
     - 導入：年次報告2022。開発の開始：40周年記念誌 p.27
     - 提供の開始、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
+  note: 共通 IF 系を使わない。どのバックエンド（分光計）につながるかは記録がない。開発プログラムには、RFSoC の分光計で 7BEE を拡張するプロジェクト（NROD:006、予算準備中）がある（開発プログラム https://www.nro.nao.ac.jp/projects/developments/ 、2026-11-18 に確認）
 
 - id: rx-t70
   name: T70
