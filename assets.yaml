@@ -19,6 +19,8 @@
 #   40周年記念誌：『野辺山宇宙電波観測所40周年記念誌』2022年2月（国立国会図書館 請求記号 MB12-M7）。p.N はそのページ。
 #     書誌の詳細はハブの history/README.md の出典の略記。年次報告と食い違うときは年次報告を採る
 #   聞き取りYYYY-MM-DD(-n) 問N：interviews/YYYY-MM-DD(-n).md の問N
+#   IF の聞き取り2026-11-18 問N：nro-45m-if の interviews/2026-11-18.md の問N
+#     https://github.com/nobeyama-radio-observatory/nro-45m-if/blob/main/interviews/2026-11-18.md
 
 - id: rx-h22
   name: H22
@@ -128,7 +130,7 @@
   name: 7BEE（7ビーム3帯域受信機）
   kind: 受信機
   part_of: nro45m
-  depends_on: [nro45m, if-system]
+  depends_on: [nro45m]
   status: 運用中
   offered: リスクシェアで提供
   introduced: 2020年に大阪府立大学と共同で開発を始め、2022年8月に搭載。2026年からリスクシェアで提供
@@ -138,6 +140,7 @@
   maintainers: 2
   docs: データシート
   sources:
+    - 共通 IF 系を使わないこと：IF の聞き取り2026-11-18 問2
     - 状態と提供：データシート
     - 導入：年次報告2022。開発の開始：40周年記念誌 p.27
     - 提供の開始、手間、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
@@ -164,7 +167,7 @@
   name: eQ
   kind: 受信機
   part_of: nro45m
-  depends_on: [nro45m, if-system]
+  depends_on: [nro45m, if-system, be-sam45]
   status: 試験中
   introduced: 台湾の中央研究院が開発。2021年11月25日に搭載（45m 鏡に外国で開発された受信機を載せるのは初めて）。搭載の審査（installation review）を通過している
   maintenance: {by: 大学など外部, condition: 試験と科学評価（CSV）の段階, effort: 小}
@@ -174,7 +177,7 @@
   sources:
     - 状態、保守、引き継ぎの見込み：聞き取り2026-11-18-2 問1、問3
     - 開発と搭載：40周年記念誌 p.69
-  note: 所外の装置。maintainers は所内で単独で判断できる人の数（0）。Z45 と同じ周波数帯で、稼働すると Z45 は運用を終える可能性がある。担い手の種類は「所外」と聞いたもので、大学か否かは未確認
+  note: 既存の IF 系と SAM45 を前提にインターフェースを作っている（IF の聞き取り2026-11-18 問2）。所外の装置。maintainers は所内で単独で判断できる人の数（0）。Z45 と同じ周波数帯で、稼働すると Z45 は運用を終える可能性がある。担い手の種類は「所外」と聞いたもので、大学か否かは未確認
 
 # 廃止した受信機
 
