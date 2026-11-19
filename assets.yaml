@@ -35,7 +35,10 @@
   renewal: 当面は国際的な競争力を持つ（仮説）
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 2
-  docs: データシート
+  docs:
+    - H22 のページ（性能、nobs のデバイステーブルの例） https://www.nro.nao.ac.jp/projects/h22/
+    - 同時観測のページ https://www.nro.nao.ac.jp/projects/h22-h40-simultaneously/ 、https://www.nro.nao.ac.jp/projects/h22-z45-simultaneously/
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ （2026-11-19 に確認）
   sources:
     - 状態と提供：データシート
     - 保守、更新の見込み、担い手の数、担当：聞き取り2026-11-18-2 問1、問3
@@ -57,7 +60,10 @@
   renewal: 更新の予定はない。性能に競争力はないが、アンテナのポインティングを決める受信機として使い続ける
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 2
-  docs: データシート
+  docs:
+    - H40 のページ（性能、nobs のデバイステーブルの例） https://www.nro.nao.ac.jp/projects/h40/
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/
+    - 霜による雑音温度の上昇の記録：障害情報 https://www.nro.nao.ac.jp/projects/45m/projects-45m-trouble/ （Trouble ID 2026-3）（2026-11-19 に確認）
   sources:
     - 状態と提供：データシート
     - 保守：障害情報 Trouble ID 2026-3
@@ -77,7 +83,9 @@
   renewal: 同じ周波数帯の eQ（rx-eq）が稼働し始めると、運用を終える可能性がある（仮説）
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 2
-  docs: データシート
+  docs:
+    - Z45 のページ（性能、論文、nobs のデバイステーブルの例） https://www.nro.nao.ac.jp/projects/z45/
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ （2026-11-19 に確認）
   sources:
     - 状態と提供：データシート
     - 導入：年次報告2013、年次報告2016
@@ -98,7 +106,10 @@
   renewal: 同じ周波数帯の 7BEE（rx-7bee）が稼働し始めると、運用を終える可能性がある（仮説）
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 2
-  docs: データシート
+  docs:
+    - FOREST のページ（性能、観測の注意） https://www.nro.nao.ac.jp/projects/forest/
+    - チューニングの手順：受信機チューニング https://www.nro.nao.ac.jp/projects/45m/observations/tunings/
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ （2026-11-19 に確認）
   sources:
     - 状態と提供：データシート
     - 導入：経緯（45m 鏡のページ、年次報告2015、年次報告2016）
@@ -119,7 +130,9 @@
   renewal: 未記入
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 0
-  docs: データシート
+  docs:
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ 。HINOTORI-TZ のページはない（表に名前だけ）
+    - 開発プログラム（NROD:001 HINOTORI） https://www.nro.nao.ac.jp/projects/developments/ （2026-11-19 に確認）
   sources:
     - 状態と提供：データシート
     - 導入：年次報告2009、技術シンポ2019
@@ -139,7 +152,10 @@
   renewal: 提供を始めたばかりで、まだしばらくは運用する（仮説）。FOREST と同じ周波数帯を受け持つ
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 2
-  docs: データシート
+  docs:
+    - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ 。7BEE のページ https://www.nro.nao.ac.jp/projects/7bee/ は準備中
+    - 観測指示書の作り方（nobs で FOREST の指示書を作り、変換スクリプトで書き換える） https://www.nro.nao.ac.jp/projects/7bee/7bee-obsfile/
+    - 立ち上げの測定（能率） https://www.nro.nao.ac.jp/projects/7bee/7beecsv-effic/ （2026-11-19 に確認）
   sources:
     - 共通 IF 系を使わないこと：IF の聞き取り2026-11-18 問2
     - 状態と提供：データシート
