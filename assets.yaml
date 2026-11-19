@@ -130,6 +130,8 @@
   renewal: 未記入
   owner_role: 受信機チーム（装置システムグループ）
   maintainers: 0
+  repos:
+    - {name: tz230-firstlight, url: https://github.com/ars096/tz230-firstlight}
   docs:
     - 装置情報（Status Report。今季の能力の表） https://www.nro.nao.ac.jp/projects/45m/datasheets/ 。HINOTORI-TZ のページはない（表に名前だけ）
     - 開発プログラム（NROD:001 HINOTORI） https://www.nro.nao.ac.jp/projects/developments/ （2026-11-19 に確認）
